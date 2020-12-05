@@ -13,10 +13,12 @@ class MainActivity : AppCompatActivity() {
 
         val myBtn = findViewById(R.id.button) as Button
         val myTextView = findViewById(R.id.textView) as TextView
+        var timesClicked = 0
 
         myBtn.setOnClickListener {
-            myTextView.text = "Hello mate"
-            Toast.makeText(this@MainActivity, "You clicked me", Toast.LENGTH_SHORT).show()
+            myTextView.text = timesClicked.toString()
+            Toast.makeText(this@MainActivity, "1+", Toast.LENGTH_SHORT).show()
+            timesClicked ++
         }
 
     }
